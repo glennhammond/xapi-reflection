@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post-Course Reflection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Reflect on your Learning</h1>
+      <p class="subtext">Take a moment to reflect on what you’ve learned.</p>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span>🌙</span>
+      </label>
+    </header>
+
+    <label for="activity">Course or Module Title:</label>
+    <input type="text" id="activity" placeholder="e.g. Child Protection Essentials" />
+
+    <label for="reflection">Your Reflection:</label>
+    <textarea id="reflection" rows="4" placeholder="What was valuable? What will you apply?"></textarea>
+
+    <button onclick="sendXAPI()">Submit</button>
+    <pre id="result"></pre>
+
+    <footer>Powered by xAPI</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
