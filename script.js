@@ -1,5 +1,5 @@
-document.getElementById("themeToggle").addEventListener("change", function () {
-  document.documentElement.setAttribute("data-theme", this.checked ? "dark" : "light");
+document.getElementById("modeToggle").addEventListener("change", function () {
+  document.body.classList.toggle("dark");
 });
 
 async function sendXAPI() {
@@ -15,8 +15,10 @@ async function sendXAPI() {
     object: {
       id: `http://example.com/activity/${activity}`,
       definition: {
-        name: { "en-US": `Course: ${activity}` },
-        description: { "en-US": `Reflection: ${reflection}` }
+        name: { "en-US": `Activity: ${activity}` },
+        description: {
+          "en-US": `Reflection: ${reflection}`
+        }
       }
     }
   };

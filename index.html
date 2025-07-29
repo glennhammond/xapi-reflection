@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Post-Course Reflection</title>
+  <title>xAPI Reflection</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Reflect on your Learning</h1>
-      <p class="subtext">Take a moment to reflect on what you’ve learned.</p>
-      <label class="theme-switch">
-        <input type="checkbox" id="themeToggle" />
-        <span>🌙</span>
-      </label>
-    </header>
+    <h1>xAPI Reflection</h1>
 
-    <label for="activity">Course or Module Title:</label>
-    <input type="text" id="activity" placeholder="e.g. Child Protection Essentials" />
+    <label for="activity">Choose an activity:</label>
+    <select id="activity">
+      <option value="watched">Watched a Video</option>
+      <option value="read">Read a Resource</option>
+      <option value="practiced">Practised Yoga</option>
+    </select>
 
     <label for="reflection">Your Reflection:</label>
-    <textarea id="reflection" rows="4" placeholder="What was valuable? What will you apply?"></textarea>
+    <textarea id="reflection" rows="4" placeholder="Write your thoughts here..."></textarea>
 
     <button onclick="sendXAPI()">Submit</button>
     <pre id="result"></pre>
 
-    <footer>Powered by xAPI</footer>
+    <div class="toggle-wrapper">
+      <label class="switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="slider"></span>
+      </label>
+      <span>Dark Mode</span>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
